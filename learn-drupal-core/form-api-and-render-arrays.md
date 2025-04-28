@@ -17,6 +17,15 @@
 - Forms are fully defined in PHP arrays, not HTML.
 - Use `FormStateInterface` to manage form data, values, and validation.
 
+**How to Validate a Form Field in Drupal**
+1. Add a `validateForm()` method to your form class.
+2. In `validateForm()`, use `$form_state->getValue('field_name')` to get the field value.
+3. Validate the value (e.g., check if it's an email).
+4. If invalid, call:
+   ```php
+   $form_state->setErrorByName('field_name', $this->t('Error message'));
+   ```
+
 ## Resources:
 
 - [18 - Unit 3: Form API and Building Forms in Drupal](https://www.youtube.com/watch?v=901OC4CyuLU)
@@ -30,3 +39,6 @@
 - [API documentation and comment standards](https://www.drupal.org/docs/develop/standards/php/api-documentation-and-comment-standards#inheritdoc)
 - [function RouteMatchInterface::getParameter](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Routing%21RouteMatchInterface.php/function/RouteMatchInterface%3A%3AgetParameter/9)
 - [function FormInterface::buildForm](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21FormInterface.php/function/FormInterface%3A%3AbuildForm/9)
+- [21 - Unit 3: Validating Form Submissions: Add a Validation Handler](https://www.youtube.com/watch?v=qQwSRbH1NG8)
+- [function FormBase::validateForm](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21FormBase.php/function/FormBase%3A%3AvalidateForm/9)
+- [function FormState::setErrorByName](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21FormState.php/function/FormState%3A%3AsetErrorByName/9)
