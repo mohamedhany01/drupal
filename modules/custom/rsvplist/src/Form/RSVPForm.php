@@ -37,16 +37,16 @@ class RSVPForm extends FormBase
         // Email text field HTML
         $form['email'] = [
             '#type' => 'textfield',
-            '#title' => t('Email address'),
+            '#title' => $this->t('Email address'),
             '#size' => 25,
-            '#description' => t('We well send updates to the email address you provide'),
+            '#description' => $this->t('We well send updates to the email address you provide'),
             '#required' => true,
         ];
 
         // Submit button
         $form['submit'] = [
             '#type' => 'submit',
-            '#value' => t('RSVP'),
+            '#value' => $this->t('RSVP'),
         ];
 
         // Hidden field holding the node ID
@@ -65,6 +65,6 @@ class RSVPForm extends FormBase
     {
         $submittedEmail = $form_state->getValue('email');
 
-        $this->messenger()->addMessage(t("The form is working! You entered @entry.", ['@entry' => $submittedEmail]));
+        $this->messenger()->addMessage($this->t("The form is working! You entered @entry.", ['@entry' => $submittedEmail]));
     }
 }
