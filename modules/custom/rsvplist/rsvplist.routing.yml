@@ -5,3 +5,11 @@ rsvplist.formdemo:
     _title: "RSVP to this Event (demo)"
   requirements:
     _permission: "access content"
+
+rsvplist.dbdemo:
+  path: "/drupaldbdemo"
+  defaults:
+    _controller: 'Drupal\rsvplist\Controller\DBAPIExamples::getUsers'
+    _title: "DB APIs in action"
+  requirements:
+    _permission: "access content"
