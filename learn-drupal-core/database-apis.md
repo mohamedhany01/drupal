@@ -108,3 +108,5 @@
 - [Schema API](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Database%21database.api.php/group/schemaapi/9)
 - [function hook_schema](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Database%21database.api.php/function/hook_schema/9)
 - [Data types](https://www.drupal.org/docs/7/api/schema-api/data-types)
+- [24 - Unit 3: Dynamic Insert Queries - Inserting into the Database Programmatically](https://www.youtube.com/watch?v=iY8Ve2ZEgFY)
+- [Insert Queries](https://www.drupal.org/docs/drupal-apis/database-api/insert-queries)
