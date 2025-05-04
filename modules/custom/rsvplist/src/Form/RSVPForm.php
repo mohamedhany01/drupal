@@ -7,9 +7,10 @@
 
 namespace Drupal\rsvplist\Form;
 
+use Drupal;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-
+use Drupal\user\Entity\User;
 
 class RSVPForm extends FormBase
 {
@@ -76,8 +77,37 @@ class RSVPForm extends FormBase
      */
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
-        $submittedEmail = $form_state->getValue('email');
 
-        $this->messenger()->addMessage($this->t("The form is working! You entered @entry.", ['@entry' => $submittedEmail]));
+        try {
+            // Get the form data
+            $userID = Drupal::currentUser()->id();
+
+            // If you want the full user object
+            // $fullUserObj = User::load($userID);
+
+            $nodeID = $form_state->getValue("nid");
+            $email = $form_state->getValue("email");
+            $currentTime = Drupal::time()->getRequestTime();
+
+            $query = Drupal::database()->insert('rsvplist');
+
+            $query->fields([
+                'uid',
+                'nid',
+                'mail',
+                'created'
+            ])->values([
+                $userID,
+                $nodeID,
+                $email,
+                $currentTime
+            ])->execute();
+
+            $nodeMessage = $this->t("You entered @entry successfully!", ['@entry' => $email]);
+            $this->messenger()->addMessage($nodeMessage);
+        } catch (\Exception $e) {
+            $nodeMessage = $this->t("Unable to save RSVP data at this time, due to internal database error. Please try again.");
+            $this->messenger()->addMessage($nodeMessage);
+        }
     }
 }
