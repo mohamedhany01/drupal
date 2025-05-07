@@ -45,3 +45,4 @@
 - [31 - Unit 3: Creating an RSVP List Reports Page](https://www.youtube.com/watch?v=nd46eIyi3dU)
 - [Cacheability of render arrays](https://www.drupal.org/docs/drupal-apis/render-api/cacheability-of-render-arrays)
 - [Introductory Drupal routes and controllers example](https://www.drupal.org/docs/drupal-apis/routing-system/introductory-drupal-routes-and-controllers-example)
+- [32 - Unit 3: Route and Menu Link for the RSVP Reports Page](https://www.youtube.com/watch?v=EtWDXDir1gQ)
