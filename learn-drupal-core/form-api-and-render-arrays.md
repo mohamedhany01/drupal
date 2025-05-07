@@ -42,3 +42,6 @@
 - [21 - Unit 3: Validating Form Submissions: Add a Validation Handler](https://www.youtube.com/watch?v=qQwSRbH1NG8)
 - [function FormBase::validateForm](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21FormBase.php/function/FormBase%3A%3AvalidateForm/9)
 - [function FormState::setErrorByName](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21FormState.php/function/FormState%3A%3AsetErrorByName/9)
+- [31 - Unit 3: Creating an RSVP List Reports Page](https://www.youtube.com/watch?v=nd46eIyi3dU)
+- [Cacheability of render arrays](https://www.drupal.org/docs/drupal-apis/render-api/cacheability-of-render-arrays)
+- [Introductory Drupal routes and controllers example](https://www.drupal.org/docs/drupal-apis/routing-system/introductory-drupal-routes-and-controllers-example)
